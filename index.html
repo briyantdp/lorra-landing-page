@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Lorra</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/favicon/favicon.ico"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar  -->
+      <nav>
+        <div class="logo">
+          <a href="#">
+            <img src="./assets/images/logo-lorra.svg" alt="Lorra Logo" />
+          </a>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#packages" class="nav-link">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sign-in" class="nav-link btn-sign-in">Sign In</a>
+          </li>
+        </ul>
+        <div class="navigation-button-toggle">
+          <input type="checkbox" id="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <div class="description">
+          <h1>Find Your True Adventure Soul</h1>
+          <p>
+            Time to reconstruct your imagination with what we provide special
+            just for you
+          </p>
+        </div>
+        <form action="">
+          <div class="input-item">
+            <label for="activity" class="input-title">Activity</label>
+            <br />
+            <input type="text" id="activity" class="input-box" />
+          </div>
+          <div class="input-item">
+            <label for="location" class="input-title">Location</label>
+            <br />
+            <div class="dropdown" style="position: relative">
+              <button class="btn-dropdown" type="button" id="location">
+                Choose Your Location ▾
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Jakarta</a>
+                <a href="#" class="dropdown-item">Bandung</a>
+                <a href="#" class="dropdown-item">Yogyakarta</a>
+                <a href="#" class="dropdown-item">Bali</a>
+                <a href="#" class="dropdown-item">Lombok</a>
+                <a href="#" class="dropdown-item">Papua</a>
+              </div>
+            </div>
+          </div>
+          <div class="input-item">
+            <label for="date" class="input-title">Date</label>
+            <br />
+            <input type="text" id="date" class="input-box" />
+          </div>
+          <button class="btn-explore">Explore Now</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main id="content">
+      <article id="packages">
+        <div class="description">
+          <h2>We Have Few Packages With Friendly Price</h2>
+        </div>
+        <div class="packages-list">
+          <!-- Packages item ditampilkan melalui data di javascript melalui proses looping -->
+        </div>
+      </article>
+      <aside id="about">
+        <div class="description">
+          <h2>About Me</h2>
+        </div>
+        <div class="profile-detail">
+          <div class="profile-img">
+            <img src="./assets/images/profile-pic.png" alt="My Picture" />
+          </div>
+          <div class="profile-description">
+            <h3 class="full-name">Bryant Dawson Priyantoro</h3>
+            <span class="job-name">Front-End Developer</span>
+            <ul>
+              <li>
+                <span>Email : bryantdp7@gmail.com</span>
+              </li>
+              <li>
+                <span>Phone Number : +62 8568 8290 80</span>
+              </li>
+              <li>
+                <span>Address : Bekasi, West Java</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-item">
+        <div class="footer-logo">
+          <img src="./assets/images/logo-lorra.svg" alt="Lorra Logo" />
+          <p>Travel the place you always dreaming about, easier</p>
+        </div>
+        <div class="company-section">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="#">Flight Partners</a>
+            </li>
+            <li>
+              <a href="#">Hotel Group</a>
+            </li>
+            <li>
+              <a href="#">Accomodations</a>
+            </li>
+            <li>
+              <a href="#">Packages</a>
+            </li>
+          </ul>
+        </div>
+        <div class="account-section">
+          <h3>Account</h3>
+          <ul>
+            <li>
+              <a href="#">Refund Policy</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+          </ul>
+        </div>
+        <div class="fast-respond-section">
+          <h3>Fast Respond</h3>
+          <ul>
+            <li>
+              <span>M Building No. 11</span>
+            </li>
+            <li>
+              <span> cs@lorra.co.id </span>
+            </li>
+            <li>
+              <span> +021 2208 1996 1993 </span>
+            </li>
+            <li>
+              <span> @lorragroup </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-description">
+        <p>Copyright © 2023 Lorra. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- Javascript -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

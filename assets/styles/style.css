@@ -1,0 +1,570 @@
+/* Import Font Lora dan Lato dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:wght@700&display=swap');
+
+/* Default Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Untuk smooth scroll ketika klik nav Home, Packages, About Me */
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+
+p, a, span {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+}
+
+h3, p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+/* akhir Default Style */
+
+
+/* Header */
+header {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .3),
+        rgba(0, 0, 0, .6)
+      ), url("../images/jumbotron-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Nav */
+nav {    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul.navbar-nav {
+    display: flex;
+    width: 55%;
+    list-style-type: none;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul.navbar-nav li.nav-item.separator{
+    font-size: 50px;
+}
+
+nav ul.navbar-nav li.nav-item a.nav-link {
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+}
+
+nav ul.navbar-nav li.nav-item a.nav-link:hover {
+    font-weight: 700;
+}
+
+nav ul.navbar-nav li.nav-item a.btn-sign-in {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 8px 30px;
+    transition: all .5s;
+}
+
+nav ul.navbar-nav li.nav-item a.btn-sign-in:hover {
+    background-color: white;
+    color: #539592;
+    cursor: pointer;
+}
+
+/* Hamburger Button Toggle */
+.navigation-button-toggle {
+    display: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navigation-button-toggle input {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    left: -18px;
+    top: -7px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.navigation-button-toggle span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.navigation-button-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.navigation-button-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(1.5px, 1.5px);
+}
+
+.navigation-button-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0)
+}
+
+.navigation-button-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.navigation-button-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, -1.5px);
+}
+/* akhir Hamburger Button Toggle */
+/* akhir Nav */
+
+
+/* Jumbotron */
+.jumbotron {
+    padding-block: 150px;
+    padding-inline: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jumbotron .description {
+    width: 360px
+}
+
+.jumbotron .description h1, p{
+    color: white;
+}
+
+.jumbotron .description p{
+    margin-top: 10px;
+}
+
+.jumbotron form {
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.jumbotron form .input-item {
+    margin-bottom: 6px;
+}
+
+.jumbotron form label.input-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    color: rgb(174, 175, 174);
+}
+
+.jumbotron form input.input-box {
+    width: 340px;
+    height: 50px;
+    background-color: #F3F3F3;
+    border: 1px solid #F1F2F3;
+    padding: 14px;
+    margin-block: 6px;
+    font-size: 1.125rem;
+}
+
+.jumbotron form input.input-box:focus {
+    outline: none;
+}
+
+.jumbotron form .dropdown {
+    position: relative;
+}
+
+.jumbotron form .dropdown .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    display: none;
+    flex-direction: column;
+    width: 340px;
+    padding: 10px 0;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #539592;
+}
+
+.jumbotron form .dropdown .dropdown-menu.collapse {
+    display: flex;
+}
+
+.jumbotron form .dropdown .dropdown-menu .dropdown-item {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: rgb(174, 175, 174);
+    padding: 6px;
+}
+
+.jumbotron form .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #539592;
+    color: white;
+}
+
+.jumbotron form button {
+    background-color: #539592;
+    height: 60px;
+    width: 340px;
+    padding-block: 20px;
+    text-align: center;
+    font-size: 1.125rem;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}
+
+.jumbotron form button:hover {
+    background-color: #346260;
+    cursor: pointer;
+    transition: all .25s ease-in;
+}
+
+.jumbotron form button.btn-explore {
+    margin-top: 40px;
+}
+
+.jumbotron form button.btn-dropdown {
+    margin: 6px 0;
+    text-transform: capitalize
+}
+/* akhir Jumbotron */
+/* akhir Header */
+
+/* Main */
+main {
+    margin: 100px auto;
+    width: 80%;
+    text-align: center;
+}
+
+/* Article Packages */
+main #packages {
+    padding-top: 100px;
+}
+
+main #packages .description {
+    width: 400px; 
+    margin: 0 auto
+}
+
+main #packages .packages-list {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+main #packages .packages-list .package-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 450px;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+}
+
+main #packages .packages-list .package-item:hover {
+    transform: scale(1.05);
+    transition: transform .2s ease-in-out;
+    cursor: pointer;
+}
+/* akhir Article Packages */
+/* akhir Main */
+
+
+/* Aside */
+main #about {
+    padding-top: 100px;
+}
+
+main #about .profile-detail {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+main #about .profile-detail .profile-img {
+    margin: 20px 0;
+}
+
+main #about .profile-detail .profile-description {
+ text-align: left;
+}
+
+main #about .profile-detail .profile-description ul {
+ list-style-type: none;
+ margin: 20px 0;
+}
+
+main #about .profile-detail .profile-description ul li {
+ margin: 5px 0;
+}
+
+/* akhir Aside */
+
+
+
+/* Footer */
+footer {
+    background-color: #539592;
+}
+
+footer .footer-item {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: start;
+    padding : 20px 0;
+    color: white;
+}
+
+footer .footer-item .footer-logo {
+    width: 250px;
+}
+
+footer .footer-item .footer-logo p {
+    margin-top: 20px;
+}
+
+footer .footer-item h3 {
+    margin-bottom: 30px;
+}
+
+footer .footer-item ul {
+    list-style: none;
+}
+
+footer .footer-item ul li {
+    margin: 15px 0;
+}
+
+footer .footer-item ul li a {
+   text-decoration: none;
+   color: white;
+
+}
+
+footer .footer-item ul li a:hover {
+   font-weight: 700;
+
+}
+
+footer .footer-description {
+    text-align: center;
+    padding: 30px; 
+}
+/* akhir footer */
+
+
+
+
+
+/* Responsive Breakpoint */
+
+/* Laptop, Monitor, or Higher */
+@media screen and (min-width : 1024px)  {
+    nav ul.navbar-nav {
+        width: 570px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width : 768px) {
+    nav ul.navbar-nav {
+        width: 65%;
+    }
+
+    main #packages .description {
+        width: 60%; 
+    }
+
+    main #packages .description h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    main #packages .packages-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer .footer-item {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    header {
+        height: 140vh;
+    }
+
+    .jumbotron {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    
+    .jumbotron .description h1, p {
+        text-align: center;
+    }
+
+    main #packages .packages-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    main #packages .packages-list .package-item {
+        text-align: center;
+    }
+
+    footer .footer-item .footer-logo p {
+        text-align : left
+    }
+
+}
+
+/* Mobile */
+@media screen and (max-width : 576px) {
+    header {
+        height: 150vh;
+    }
+    nav {
+        justify-content: space-between;
+        margin-inline: 30px;
+    }
+
+    nav ul.navbar-nav {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #539592;
+        height: 700px;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+    }
+    
+    nav ul.navbar-nav.collapse {
+        opacity: 1;
+        transform: translateX(40px);
+        transition: transform .5s ease-in;
+    }
+
+    .navigation-button-toggle {
+        display: flex;
+    }
+
+    .jumbotron .description h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .jumbotron .description p {
+        font-size: .9rem;
+        line-height: 1.2rem;
+    }
+
+    .jumbotron form {
+        width: 300px;
+    }
+
+    .jumbotron form input.input-box,
+    .jumbotron form button,
+    .jumbotron form .dropdown .dropdown-menu
+     {
+        width: 240px;
+    }
+
+    main #packages {
+        padding-top: 20px;
+    }
+
+    main #packages .description {
+        width: 100%; 
+    }
+
+    main #packages .packages-list .package-item {
+        width: 250px;
+        height: 375px;
+    }
+
+    aside .profile-detail {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    aside .profile-detail .profile-description  {
+        margin-top: -40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-item .footer-logo {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer .footer-item .footer-logo p {
+        text-align: center;
+    }
+
+}
